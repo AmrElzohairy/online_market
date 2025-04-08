@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_market/core/app_colors.dart';
 
 class CustomTextWithArrowButton extends StatelessWidget {
   const CustomTextWithArrowButton({super.key, required this.text, this.onTap});
@@ -13,7 +14,7 @@ class CustomTextWithArrowButton extends StatelessWidget {
         ElevatedButton(
           onPressed: onTap,
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.blue,
+            backgroundColor: AppColors.kPrimaryColor,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16.0),
             ),
