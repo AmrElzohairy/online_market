@@ -3,6 +3,7 @@ import 'package:online_market/views/auth/ui/sign_up_view.dart';
 import 'package:online_market/views/auth/ui/widgets/custom_text_button.dart';
 import 'package:online_market/views/auth/ui/widgets/custom_text_form_field.dart';
 import 'package:online_market/views/auth/ui/widgets/custom_text_with_arrow_button.dart';
+import 'package:online_market/views/nav_bar/ui/main_home_view.dart';
 
 import '../../../core/navigation_functions.dart';
 import 'forgot_password_view.dart';
@@ -59,7 +60,9 @@ class LoginView extends StatelessWidget {
                       const SizedBox(height: 20),
                       CustomTextWithArrowButton(
                         text: "Login With Google",
-                        onTap: () {},
+                        onTap: () {
+                          navTo(context, const MainViews());
+                        },
                       ),
                       const SizedBox(height: 20),
                       Row(
