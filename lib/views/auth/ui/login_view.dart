@@ -3,6 +3,9 @@ import 'package:online_market/views/auth/ui/widgets/custom_text_button.dart';
 import 'package:online_market/views/auth/ui/widgets/custom_text_form_field.dart';
 import 'package:online_market/views/auth/ui/widgets/custom_text_with_arrow_button.dart';
 
+import '../../../core/navigation_functions.dart';
+import 'forgot_password_view.dart';
+
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
 
@@ -44,7 +47,9 @@ class LoginView extends StatelessWidget {
                         children: [
                           CustomTextButton(
                             text: "Forgot Password?",
-                            onTap: () {},
+                            onTap: () {
+                              navTo(context, const ForgotPasswordView());
+                            },
                           ),
                         ],
                       ),
