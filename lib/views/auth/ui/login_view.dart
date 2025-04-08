@@ -1,36 +1,58 @@
 import 'package:flutter/material.dart';
+import 'package:online_market/views/auth/ui/widgets/custom_text_button.dart';
 import 'package:online_market/views/auth/ui/widgets/custom_text_form_field.dart';
+import 'package:online_market/views/auth/ui/widgets/custom_text_with_arrow_button.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(height: 30),
-            Align(
+            const SizedBox(height: 30),
+            const Align(
               alignment: Alignment.center,
               child: Text(
                 "Welcom to Online Market",
                 style: TextStyle(fontSize: 20),
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 100),
             Card(
-              margin: EdgeInsets.all(16),
+              margin: const EdgeInsets.all(16),
               child: Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 child: Column(
                   children: [
-                    CustomTextFormField(labelText: "Email", isSecured: false),
-                    SizedBox(height: 20),
-                    CustomTextFormField(
+                    const CustomTextFormField(
+                      labelText: "Email",
+                      isSecured: false,
+                    ),
+                    const SizedBox(height: 20),
+                    const CustomTextFormField(
                       labelText: "Password",
                       isSecured: true,
                       suffIcon: Icon(Icons.visibility),
+                    ),
+                    const SizedBox(height: 20),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        CustomTextButton(
+                          text: "Forgot Password?",
+                          onTap: () {},
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    CustomTextWithArrowButton(text: "Login", onTap: () {}),
+                    const SizedBox(height: 20),
+                    CustomTextWithArrowButton(
+                      text: "Login With Google",
+                      onTap: () {},
                     ),
                   ],
                 ),
