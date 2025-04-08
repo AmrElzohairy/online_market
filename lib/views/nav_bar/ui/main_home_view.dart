@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:online_market/core/app_colors.dart';
+import 'package:online_market/core/theme/app_colors.dart';
 import 'package:online_market/views/favorites/ui/favorites_view.dart';
 import 'package:online_market/views/home/ui/home_view.dart';
 import 'package:online_market/views/profile/ui/profile_view.dart';

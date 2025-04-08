@@ -5,7 +5,7 @@ import 'package:online_market/views/auth/ui/widgets/custom_text_form_field.dart'
 import 'package:online_market/views/auth/ui/widgets/custom_text_with_arrow_button.dart';
 import 'package:online_market/views/nav_bar/ui/main_home_view.dart';
 
-import '../../../core/navigation_functions.dart';
+import '../../../core/helpers/navigation_functions.dart';
 import 'forgot_password_view.dart';
 
 class LoginView extends StatelessWidget {

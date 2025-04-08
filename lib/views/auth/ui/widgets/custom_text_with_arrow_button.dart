@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:online_market/core/app_colors.dart';
+import 'package:online_market/core/theme/app_colors.dart';
 
 class CustomTextWithArrowButton extends StatelessWidget {
   const CustomTextWithArrowButton({super.key, required this.text, this.onTap});
