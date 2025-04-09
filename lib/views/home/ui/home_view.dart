@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:online_market/core/widgets/custom_search_field.dart';
 import 'package:online_market/views/home/ui/widgets/categories_list.dart';
-import 'package:online_market/views/home/ui/widgets/product_item.dart';
 import 'package:online_market/views/home/ui/widgets/products_list.dart';
 
 class HomeView extends StatefulWidget {
@@ -50,7 +49,6 @@ class _HomeViewState extends State<HomeView> {
           ),
           const SizedBox(height: 10),
           const ProductsList(),
-          const ProductItem(),
         ],
       ),
     );
