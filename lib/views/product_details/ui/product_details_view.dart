@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:online_market/core/theme/app_colors.dart';
 import 'package:online_market/core/widgets/build_custom_app_bar.dart';
+import 'package:online_market/views/auth/ui/widgets/custom_text_form_field.dart';
 import 'package:online_market/views/home/ui/widgets/product_image_skeletone.dart';
+import 'package:online_market/views/product_details/ui/widgets/coments_list.dart';
 
 class ProductDetailsView extends StatelessWidget {
   const ProductDetailsView({super.key});
@@ -87,6 +89,25 @@ class ProductDetailsView extends StatelessWidget {
               onRatingUpdate: (rating) {},
             ),
           ),
+          const SizedBox(height: 20),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: CustomTextFormField(
+              labelText: "type your review here",
+              suffIcon: Icon(Icons.send),
+            ),
+          ),
+          const SizedBox(height: 20),
+          const Text(
+            "  Comments",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: AppColors.kBlackColor,
+            ),
+          ),
+          const SizedBox(height: 10),
+          const CommentsList(),
         ],
       ),
     );
