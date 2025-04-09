@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:online_market/core/helpers/navigation_functions.dart';
 import 'package:online_market/core/theme/app_colors.dart';
+import 'package:online_market/views/profile/ui/edit_name_view.dart';
 import 'package:online_market/views/profile/ui/widgets/custom_profile_card.dart';
 
 class ProfileView extends StatelessWidget {
@@ -31,7 +33,9 @@ class ProfileView extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                navTo(context, const EditNameView());
+              },
               child: const CustomProfileCard(
                 icon: Icons.person,
                 title: "Edit Name",
