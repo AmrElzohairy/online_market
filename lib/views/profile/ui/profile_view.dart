@@ -34,7 +34,7 @@ class ProfileView extends StatelessWidget {
               onTap: () {},
               child: const CustomProfileCard(
                 icon: Icons.person,
-                title: "Edit Profile",
+                title: "Edit Name",
               ),
             ),
             const SizedBox(height: 10),
