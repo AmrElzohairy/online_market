@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:online_market/core/theme/app_colors.dart';
-import 'package:online_market/views/auth/ui/login_view.dart';
+import 'package:online_market/views/nav_bar/ui/main_home_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(scaffoldBackgroundColor: AppColors.kScaffoldColor),
-      home: LoginView(),
+      home: const MainViews(),
     );
   }
 }
