@@ -4,16 +4,19 @@ import 'package:online_market/constants.dart';
 import 'package:online_market/core/theme/app_colors.dart';
 import 'package:online_market/views/auth/logic/auth_cubit/auth_cubit.dart';
 import 'package:online_market/views/auth/ui/login_view.dart';
+import 'package:online_market/views/nav_bar/ui/main_home_view.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Supabase.initialize(url: supabaseUrl, anonKey: supabaseAnonKey);
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final client = Supabase.instance.client;
+
+  MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -23,7 +26,10 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(scaffoldBackgroundColor: AppColors.kScaffoldColor),
-        home: const LoginView(),
+        home:
+            client.auth.currentUser != null
+                ? const MainViews()
+                : const LoginView(),
       ),
     );
   }
