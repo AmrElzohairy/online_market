@@ -36,6 +36,7 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   google_nav_bar: ^5.0.7
   skeletonizer: ^1.4.3
+  supabase_flutter: ^2.8.4
 
 dev_dependencies:
   flutter_lints: ^5.0.0

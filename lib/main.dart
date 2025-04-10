@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:online_market/constants.dart';
 import 'package:online_market/core/theme/app_colors.dart';
 import 'package:online_market/views/nav_bar/ui/main_home_view.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Supabase.initialize(
+    url: supabaseUrl,
+    anonKey:supabaseAnonKey
+        ,
+  );
   runApp(const MyApp());
 }
 
