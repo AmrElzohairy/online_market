@@ -1,5 +1,7 @@
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:online_market/core/widgets/custom_snac_bar.dart';
 import 'package:online_market/views/auth/logic/auth_cubit/auth_cubit.dart';
 import 'package:online_market/views/auth/ui/sign_up_view.dart';
 import 'package:online_market/views/auth/ui/widgets/custom_text_button.dart';
@@ -26,10 +28,19 @@ class _LoginViewState extends State<LoginView> {
     return BlocConsumer<AuthCubit, AuthState>(
       listener: (context, state) {
         if (state is LoginSuccess) {
+          customSnacBar(
+            context,
+            title: "Welcome",
+            message: "Login Success",
+            contentType: ContentType.success,
+          );
           // navTo(context, const MainViews());
         } else if (state is LoginFailure) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text(state.error), backgroundColor: Colors.red),
+          customSnacBar(
+            context,
+            title: "Login Failed",
+            message: state.error,
+            contentType: ContentType.failure,
           );
         }
       },
