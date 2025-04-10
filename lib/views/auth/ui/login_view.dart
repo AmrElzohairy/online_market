@@ -34,7 +34,7 @@ class _LoginViewState extends State<LoginView> {
             message: "Login Success",
             contentType: ContentType.success,
           );
-          // navTo(context, const MainViews());
+          navTo(context, const MainViews());
         } else if (state is LoginFailure) {
           customSnacBar(
             context,
